@@ -1,0 +1,21 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #eae7dc;
+}
+
+h1 {
+	font-family: 'Josefin Sans', sans-serif;
+	color: #e85a4f;
+	font-size: 6vw;
+	text-shadow: 1vw 1vw 0 #d8c3a5;
+}
+
+.vertical-line {
+	border-left: 4vw solid #d8c3a5;
+	height: 100vh;
+	position: absolute;
+	left: 80%;
+	margin-left: -3px;
+	top: 0;
+}
