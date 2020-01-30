@@ -4,6 +4,13 @@ body {
 	background-color: #eae7dc;
 }
 
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 15vw 0 2vw;
+}
+
 h1 {
 	font-family: 'Josefin Sans', sans-serif;
 	color: #e85a4f;
@@ -11,11 +18,36 @@ h1 {
 	text-shadow: 1vw 1vw 0 #d8c3a5;
 }
 
+h2 {
+	text-align: center;
+	font-family: 'Hind', sans-serif;
+	font-size: 2vw;
+	color: #8e8d8a;
+}
+
+#displayed-date {
+	display: block;
+	color: #e98074;
+}
+
 .vertical-line {
-	border-left: 4vw solid #d8c3a5;
 	height: 100vh;
 	position: absolute;
-	left: 80%;
-	margin-left: -3px;
 	top: 0;
+	padding: 0 10px;
+}
+
+#first-line {
+	border-left: 4vw solid #d8c3a5;
+	left: 90%;
+}
+
+#second-line {
+	border-left: 1vw solid #e98074;
+	left: 96%;
+}
+
+#third-line {
+	border-left: .4vw solid #e85a4f;
+	left: 95%;
 }
