@@ -2,6 +2,9 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #eae7dc;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
 
 header {
@@ -50,4 +53,119 @@ h2 {
 #third-line {
 	border-left: .4vw solid #e85a4f;
 	left: 95%;
+}
+
+.clock {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.clock-face {
+	width: 30%;
+	height: auto;
+	padding-top: 30%;
+	position: relative;
+	border-radius: 50%;
+	background-color: #d8c3a5;
+	border: 4px solid #8e8d8a;
+}
+
+.center {
+	position: absolute;
+	background-color: black;
+	left: calc(50% - 2px);
+	top: calc(50% - 2px);
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #e85a4f;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+	h1 {
+		font-size: 8vw;
+	}
+
+	header {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+	}
+
+	h2 {
+		font-size: 6vw;
+	}
+
+	.clock-face {
+		width: 60%;
+		padding-top: 60%;
+		margin-top: 40px;
+	}
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+	h1 {
+		font-size: 6vw;
+	}
+
+	header {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+	}
+
+	.clock-face {
+		width: 50%;
+		padding-top: 50%;
+		margin-top: 100px;
+	}
+
+	h2 {
+		font-size: 4vw;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	h1 {
+		font-size: 8vw;
+	}
+
+	header {
+		display: flex;
+		justify-content: center;
+	}
+
+	.clock-face {
+		width: 60%;
+		padding-top: 60%;
+		margin-top: 50px;
+	}
+
+	h2 {
+		font-size: 4vw;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	h1 {
+		font-size: 4vw;
+	}
+
+	header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 0 20vw 0 10vw;
+	}
+
+	.clock-face {
+		width: 25%;
+		padding-top: 25%;
+		margin-top: 5vh;
+	}
+
+	h2 {
+		font-size: 3vw;
+	}
 }
