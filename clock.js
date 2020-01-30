@@ -14,12 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		'November',
 		'December'
 	];
-	const date = new Date();
-	const currentDay = date.getDay();
-	const currentMonth = monthNames[date.getMonth()];
-	const currentYear = date.getFullYear();
 
-	displayedDate.innerHTML = `${currentDay} ${currentMonth} ${currentYear}`;
+	const currentDate = () => {
+		const today = new Date();
+		const currentDay = String(today.getDate()).padStart(2, '0');
+		const currentMonth = String(monthNames[today.getMonth()]);
+		const currentYear = today.getFullYear();
+		displayedDate.innerHTML = `${currentDay} ${currentMonth} ${currentYear}`;
+	};
 
 	const currentTime = () => {
 		const digitalClock = document.querySelector('.digital-clock');
@@ -47,5 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
+	currentDate();
 	currentTime();
 });

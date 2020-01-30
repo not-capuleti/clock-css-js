@@ -9,22 +9,24 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <h1>CSS & JS CLOCK</h1>
-        <h2>Current date <span id="displayed-date"></span></h2>
-    </header>
-    <div class="vertical-line" id="first-line"></div>
-    <div class="vertical-line" id="second-line"></div>
-    <div class="vertical-line" id="third-line"></div>
-    <div class="clock">
-        <div class="clock-face">
-            <div class="hand hour-hand"></div>
-            <div class="hand minute-hand"></div>
-            <div class="hand second-hand"></div>
-            <div class="center"></div>
+    <div class="container">
+        <header>
+            <h1>CSS & JS CLOCK</h1>
+            <h2>Current date:<span id="displayed-date"></span></h2>
+        </header>
+        <div class="vertical-line" id="first-line"></div>
+        <div class="vertical-line" id="second-line"></div>
+        <div class="vertical-line" id="third-line"></div>
+        <div class="clock">
+            <div class="clock-face">
+                <div class="hand hour-hand"></div>
+                <div class="hand minutes-hand"></div>
+                <div class="hand seconds-hand"></div>
+                <div class="center"></div>
+                <div class="digital-clock"></div>
+            </div>
         </div>
     </div>
-    <div class="digital-clock"></div>
     <script src="clock.js"></script>
 </body>
 </html>
