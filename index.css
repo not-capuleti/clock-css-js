@@ -8,17 +8,11 @@ body {
 	background-color: #eae7dc;
 }
 
-.container {
-	width: 90%;
-	padding: 3vw 0;
-	margin: 0 auto;
-}
-
 header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0 15vw 5vw 2vw;
+	padding: 3vh 0 7vh 0;
 }
 
 h1 {
@@ -33,6 +27,7 @@ h2 {
 	font-family: 'Hind', sans-serif;
 	font-size: 2vw;
 	color: #8e8d8a;
+	padding-right: 15vw;
 }
 
 #displayed-date {
@@ -41,7 +36,7 @@ h2 {
 }
 
 .vertical-line {
-	height: 100vh;
+	height: 100%;
 	position: absolute;
 	top: 0;
 	padding: 0 10px;
@@ -66,6 +61,8 @@ h2 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: 100%;
+	margin: 0 auto;
 }
 
 .clock-face {
@@ -95,6 +92,7 @@ h2 {
 	position: absolute;
 	transform: rotate(90deg);
 	transform-origin: 100%;
+	z-index: 1;
 }
 
 .hour-hand {
@@ -119,13 +117,15 @@ h2 {
 }
 
 .digital-clock {
-	font-size: 2vw;
+	font-family: 'Abel', sans-serif;
+	font-size: 1.5vw;
 	color: #fff;
 	position: absolute;
-	top: 30%;
-	left: 20%;
+	left: 10%;
+	top: 50%;
 	background-color: #e98074;
-	padding: 3px;
+	padding: 1.3vw;
 	border-radius: 4px;
 	box-shadow: inset 0px 2px 5px rgba(0, 0, 0, .4);
+	z-index: 0;
 }

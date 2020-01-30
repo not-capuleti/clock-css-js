@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		'December'
 	];
 
-	const currentDate = () => {
+	const setDate = () => {
 		const today = new Date();
 		const currentDay = String(today.getDate()).padStart(2, '0');
 		const currentMonth = String(monthNames[today.getMonth()]);
@@ -23,8 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		displayedDate.innerHTML = `${currentDay} ${currentMonth} ${currentYear}`;
 	};
 
-	const currentTime = () => {
+	const setTime = () => {
 		const digitalClock = document.querySelector('.digital-clock');
+
+		const secondHand = document.querySelector('.seconds-hand'),
+			minsHand = document.querySelector('.minutes-hand'),
+			hoursHand = document.querySelector('.hour-hand');
+
 		const date = new Date();
 		let hour = date.getHours(),
 			min = date.getMinutes(),
@@ -36,8 +41,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		digitalClock.innerText = `${hour}:${min}:${sec}`;
 
+		const secDegree = sec * (360 / 60) + 90;
+		const minDegree = min * (360 / 60) + 90;
+		const hourDegree = hour * (360 / 12) + 90;
+
+		secondHand.style.transform = `rotate(${secDegree}deg)`;
+		minsHand.style.transform = `rotate(${minDegree}deg)`;
+		hoursHand.style.transform = `rotate(${hourDegree}deg)`;
+
 		let timer = setTimeout(() => {
-			currentTime();
+			setTime();
 		}, 1000);
 	};
 
@@ -49,6 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
-	currentDate();
-	currentTime();
+	setDate();
+	setTime();
 });
